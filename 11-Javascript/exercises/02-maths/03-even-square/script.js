@@ -12,5 +12,17 @@
 (() => {
     document.getElementById("run").addEventListener("click", () => {
         // your code here
+        var values="";
+
+        for(var i =1; i<22; i++){
+            var value = i*i;
+            // console.log(value);
+
+            if (i%2 == 0){
+                values = values + i + "^2 = " + value + ", ";
+            };
+        };
+
+        alert(values);
     });
 })();

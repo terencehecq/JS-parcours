@@ -11,4 +11,6 @@
 
 (() => {
     // your code here
+    var name=prompt("Quel est votre prénom?");
+    alert("Bonjour "+name);
 })();

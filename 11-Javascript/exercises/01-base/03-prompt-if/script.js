@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+    var rep=prompt("Voulez-vous du gâteau? (oui/non)");
+    if (rep=="oui"|| rep=="Oui" || rep=="OUI"){
+        alert("Vous m'en direz des nouvelles ! :)");
+    } else{
+        alert("Du gâteau, ca ne se refuse pas ! :(");
+    }
 })();

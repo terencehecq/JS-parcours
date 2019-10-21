@@ -11,4 +11,21 @@
 
 (() => {
     // your code here
+
+    function infosQuery(){
+        var age=prompt("Quel age avez-vous?");
+        var sexe=prompt("Quel est votre sexe? (M/F/NB)");
+        var ville=prompt("De quelle ville venez-vous?");
+
+        var conf=prompt("Ces informations sont-elles correctes? \n\n" + "Age: "+ age + ", Sexe: " + sexe + ", Ville: " + ville + "\n\nSi oui, confirmez avec 'OK'.");
+
+        if(conf==""||conf=="OK"||conf=="ok"||conf=="Ok"){
+            return alert("Merci !");
+        } else{
+            infosQuery();
+        };
+    };
+
+    infosQuery();
+
 })();
