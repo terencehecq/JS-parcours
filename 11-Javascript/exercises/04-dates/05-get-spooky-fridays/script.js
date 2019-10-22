@@ -11,4 +11,23 @@
 
 (() => {
     // your code here
+
+    document.getElementById("run").addEventListener("click", function(){
+
+    var year = document.getElementById("year").value;
+
+    var list = [];
+    var arrMonth=["janvier", "février", "mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+
+    for (var i=0; i<12;i++){
+        var month = new Date(year,i,13);
+        var day = month.getDay();
+        
+        if (day == 5){
+            var show = arrMonth[month.getMonth()];
+            list.push(" " + show);
+        }
+    }
+    alert(list);
+});
 })();
