@@ -38,5 +38,5 @@
         document.getElementById("sum").innerHTML = sum;
         document.getElementById("average").innerHTML = sum/numbers.length;
         
-    });
+    })
 })();
