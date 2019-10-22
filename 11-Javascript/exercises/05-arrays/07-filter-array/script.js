@@ -89,4 +89,16 @@
     ];
 
     // your code here
+
+    document.getElementById("run").addEventListener("click", function(){
+        
+        const majeurs = [];
+        people.forEach(function(person){
+
+            if (person.age > 18){
+                majeurs.push(person);
+            }
+        })
+        console.log(majeurs);
+    })
 })();

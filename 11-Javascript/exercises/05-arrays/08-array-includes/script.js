@@ -26,4 +26,13 @@
     ];
 
     // your code here
+    
+    document.getElementById("run").addEventListener("click", function(){
+        
+        if(fruits.includes("pomme") == true){
+            console.log("Il y a une pomme dans la liste !")
+        }else{ 
+            console.log("Pas de pomme par ici...")
+        }
+    })
 })();
