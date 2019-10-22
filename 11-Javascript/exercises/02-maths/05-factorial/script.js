@@ -14,5 +14,12 @@
 
     document.getElementById("run").addEventListener("click", () => {
         // your code here
+        var num = parseInt(document.getElementById("number").value);
+
+        var fact=1;
+        for (var i=1; i<num; i++){
+            fact = fact*(i+1);
+        };
+            alert(fact);
     });
 })();

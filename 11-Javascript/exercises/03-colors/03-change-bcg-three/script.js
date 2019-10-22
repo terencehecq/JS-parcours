@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+
+    document.getElementById("run").addEventListener("click",function randomColor(){
+        var randomNum1 = parseInt(Math.random()*255);
+        var randomNum2 = parseInt(Math.random()*255);
+        var randomNum3 = parseInt(Math.random()*255);
+        var color = "rgb("+randomNum1+","+randomNum2+","+randomNum3+")";
+        console.log(color);
+
+        document.body.style.backgroundColor =color;
+    })
 })();

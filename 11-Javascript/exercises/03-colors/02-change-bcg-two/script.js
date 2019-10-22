@@ -11,4 +11,24 @@
 
 (() => {
     // your code here
+
+    // ----- Méthode 1 : -----
+
+    // function changeBg(){
+    //     var color = document.getElementById("color").value;
+
+    //     document.body.style.backgroundColor = color;
+    // }
+
+    // document.getElementById("run").addEventListener("click", changeBg);
+
+
+    //-----------
+
+    // ----- Amélioration du code : -----
+
+    document.getElementById("run").addEventListener("click", function changeBg(){
+        var color = document.getElementById("color").value;
+        document.body.style.backgroundColor = color;
+    });
 })();

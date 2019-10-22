@@ -10,5 +10,34 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    // to get the value of an input: document.getElementById("element-id").value
+
+    const page = document.body;
+
+    const changeColor = color => {
+        // perform the operation
+        
+        
+        switch(color){
+            case "red":
+                page.style.backgroundColor = "red";
+                break;
+            case "green":
+                page.style.backgroundColor = "green";
+                break;
+            case "yellow":
+                page.style.backgroundColor = "yellow";
+                break;
+            case "blue":
+                page.style.backgroundColor = "blue";
+                break;
+        };
+    };
+
+    Array.from(document.querySelectorAll("button")).forEach($btn =>
+        $btn.addEventListener(
+            "click",
+            () => (changeColor($btn.id), false),
+        ),
+    );
 })();
