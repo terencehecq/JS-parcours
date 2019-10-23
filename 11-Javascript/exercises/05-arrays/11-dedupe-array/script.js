@@ -28,4 +28,16 @@
     ];
 
     // your code here
+    const fruitsClean = [];
+
+
+    document.getElementById("run").addEventListener("click", () => {
+
+        fruits.forEach(function(fruit){
+            if (fruitsClean.includes(fruit) == false){
+                fruitsClean.push(fruit)
+            }
+        });
+        console.log(fruitsClean);
+    })
 })();

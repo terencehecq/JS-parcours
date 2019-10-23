@@ -89,4 +89,40 @@
     ];
 
     // your code here
+
+    document.getElementById("run").addEventListener("click", function(){
+        
+
+        // On stock tous les ages dans un array
+
+        var ages = [];
+
+        people.forEach(function(person){
+            ages.push(person.age);
+        });
+
+        console.log(people.age);
+
+        // Utilisatione de reduce() : 
+        // reduce() lance la fonction entrée en paramètre
+        // La fct doit avoir (au moins) 2 param reconnus automatiquement : "total" et "num" (peu importe leur nom)
+        // total = la valeur actuelle dans l'array
+        // num = la prochaine valeur
+        // Ici, le total augmente (total + num) mais on peut lui appliquer n'importe quelle opération.
+
+        function getSum(total, num){
+            return total + num;
+        };
+
+        console.log(ages.reduce(getSum));
+
+
+        // La fonction peut aussi être écrite directement après le reduce() 
+
+        console.log(ages.reduce(function getSum(total, num){
+            return total + num;
+        }));
+
+        
+    });
 })();
