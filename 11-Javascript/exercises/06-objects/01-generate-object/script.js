@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
+
+    var person = new Object();
+    person.firstname="Térence";
+    person.lastname="Hecq";
+    person.age=23;
+    person.city="Chatelineau";
+    person.country="Belgium";
+
+    document.getElementById("run").addEventListener("click",()=>{
+
+        console.log(person);
+    });
 })();
