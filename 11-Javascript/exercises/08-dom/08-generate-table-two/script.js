@@ -11,4 +11,29 @@
 
 (() => {
     // your code here
+    let target = document.getElementById("target");
+    let table = document.createElement('table'); // createElement est une méthode de document
+    
+    let nbCol = 10;
+    let nbRow = 10;
+
+    //J'initialise le tableau dans la balise target
+    target.appendChild(table);
+
+    for(let i=1; i<=nbRow;i++){ //je boucle pour créer le nb de colonnes que je veux
+
+        let row = document.createElement('tr'); 
+        // je déclare ma variable qui créée les <tr> </tr> 
+            
+        target.querySelector("table").appendChild(row); 
+        // génère la colonne
+
+        for(let j=1; j<=nbCol;j++){
+            let col = document.createElement('td');
+
+            target.querySelector(`tr:nth-child(${i})`).appendChild(col);
+            target.querySelector(`tr:nth-child(${i})>td:nth-child(${j})`).innerHTML = i*j
+        }
+
+    }
 })();
