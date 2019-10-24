@@ -11,4 +11,13 @@
 
 (() => {
     // your code here
+
+    var elementSource = document.getElementById("source");
+    var source = elementSource.dataset.image;
+
+    console.log(source);
+
+    document.getElementById("target").innerHTML = `<img src="${source}">`
+
+    elementSource.parentElement.removeChild(elementSource);
 })();

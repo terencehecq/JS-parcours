@@ -11,9 +11,40 @@
 
 (() => {
     class Animal {
+
+        constructor(name, greeting){
+            this.name = name;
+            this.greeting = greeting;
+        }
+
         sayHello() {
-            return `${this.constructor.greeting}! I'm ${this.name}!`;
+            return `${this.greeting}! I'm ${this.name}!`;
         }
     }
     // your code here
+
+    class Cat extends Animal{
+        constructor(name, greeting){ 
+            super(name); // Je récupère la propriété name de la classe "Animal"
+            this.greeting = "Meow " // Je défini la valeur par défaut de greeting pour la classe "Cat"
+        }
+    }
+
+    class Dog extends Animal{
+        constructor(name, greeting){
+            super(name);
+            this.greeting = "Wouf "
+        }
+    }
+
+
+    document.getElementById("run").addEventListener("click", () => {
+
+        var archi = new Cat("Archi");
+        var cloche = new Dog("Clochette");
+
+        console.log(archi.sayHello());
+        console.log(cloche.sayHello());
+        
+    });
 })();

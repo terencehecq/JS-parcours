@@ -11,4 +11,13 @@
 
 (() => {
     // your code here
+
+    // document.querySelectorAll(".target").innerHTML --> ne fonctionne pas !!
+
+    var targets = document.querySelectorAll(".target");
+
+    targets.forEach(function(target){ // On boucle sur chaque élément pour le changer
+        target.innerHTML = "Owned";
+    });
+
 })();
