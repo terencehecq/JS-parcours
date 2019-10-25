@@ -11,4 +11,9 @@
 
 (() => {
     // your code here
+
+    let text = document.querySelector(".material::first-letter");
+
+    text.style.color = "red";
+    
 })();

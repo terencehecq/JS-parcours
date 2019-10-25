@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+
+    document.getElementById("run").addEventListener("click", ()=>{
+
+        window.lib.getPersons((error,persons)=>{
+            console.log(persons);
+            if(persons == undefined){
+                console.error(error);
+            }
+        })
+    })
 })();

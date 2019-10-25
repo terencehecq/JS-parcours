@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", ()=>{
+        window.lib.getPosts((error,articles) =>{
+
+            console.log(error);
+
+            articles.forEach((article)=>{
+                console.log(article);
+            });
+            
+        Promise.then((article)=>{
+            console.log(article)
+        })
+        });
+    })
 })();
