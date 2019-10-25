@@ -21,17 +21,16 @@
         let srcHover = img.dataset.hover;
 
         // Au hover, je lance la fct qui a comme paramètre "e"
-    document.querySelector("img").addEventListener("mouseover", (e) => {
-
+    document.querySelector("img").addEventListener("mouseover", () => {
         // au mouseover, je récupère la src du TARGET (sur lequel on hover)
         // et je lui attribue la valeur de srcHover dans le DOM
-        e.target.src = srcHover;
+        img.src = srcHover;
 
     });
 
-    document.querySelector("img").addEventListener("mouseleave", (e) =>{
+    document.querySelector("img").addEventListener("mouseleave", () =>{
 
-        e.target.src = srcO;
+        img.src = srcO;
     });
 
 })();

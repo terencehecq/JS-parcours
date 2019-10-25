@@ -11,4 +11,24 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        
+        let mdp1 = document.getElementById("pass-one").value;
+        let mdp2 = document.getElementById("pass-two").value;
+
+        if(mdp1 == "" || mdp2 == ""){
+            alert("Veuillez entrer 2 mots de passe");
+        }else if(mdp1 === mdp2){
+            document.getElementById("pass-one").style.borderColor = "green";
+            document.getElementById("pass-two").style.borderColor = "green";
+            document.getElementById("pass-one").style.backgroundColor = "rgba(155, 206, 127,0.4)";
+            document.getElementById("pass-two").style.backgroundColor = "rgba(155, 206, 127,0.4)";
+        } else{
+            document.getElementById("pass-one").style.borderColor = "#cc0000";
+            document.getElementById("pass-two").style.borderColor = "#cc0000";
+            document.getElementById("pass-one").style.backgroundColor = "rgba(207, 85, 83,0.3)";
+            document.getElementById("pass-two").style.backgroundColor = "rgba(207, 85, 83,0.3)";
+        }
+
+    });
 })();

@@ -26,13 +26,14 @@
         // je déclare ma variable qui créée les <tr> </tr> 
             
         target.querySelector("table").appendChild(row); 
-        // génère la colonne
+        // Je créée les balises <tr> dans le HTML
 
-        for(let j=1; j<=nbCol;j++){
+        for(let j=1; j<=nbCol;j++){ // la boucle est imbriquée dans la 1ere boucle pour créer les <td> dans chaque <tr>
             let col = document.createElement('td');
+            // Je déclare la variable qui créée les <td>
 
-            target.querySelector(`tr:nth-child(${i})`).appendChild(col);
-            target.querySelector(`tr:nth-child(${i})>td:nth-child(${j})`).innerHTML = i*j
+            target.querySelector(`tr:nth-child(${i})`).appendChild(col); // Je créée les balises td dans le HTML
+            target.querySelector(`tr:nth-child(${i})>td:nth-child(${j})`).innerHTML = i*j // Je remplis les colonnes du tableau
         }
 
     }

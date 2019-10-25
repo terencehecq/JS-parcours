@@ -11,4 +11,24 @@
 
 (() => {
     // your code here
+
+    document.getElementById("pass-one").addEventListener("keyup", (e)=>{
+
+        let numCount = 0;
+        let mdp = document.getElementById("pass-one").value;
+
+        for (let i=0; i<=mdp.length; i++){
+
+            if(mdp.charCodeAt(i) >=48 && mdp.charCodeAt(i)<=57){
+                numCount = numCount + 1 ;
+            }
+        }
+
+        if(mdp.length >=8 && numCount >=2 ){
+            document.getElementById("validity").innerHTML = "Ok";
+        } else{
+            document.getElementById("validity").innerHTML = "Pas ok";
+        }
+
+    })
 })();

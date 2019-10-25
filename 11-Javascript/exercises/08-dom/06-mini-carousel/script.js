@@ -20,7 +20,7 @@
 
     // your code here
     let img = document.querySelector("img");
-        let i =0;
+    let i =0;
 
     document.getElementById("next").addEventListener("click", () => {
 
