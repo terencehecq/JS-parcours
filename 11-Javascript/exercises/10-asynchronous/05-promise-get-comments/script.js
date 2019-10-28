@@ -11,4 +11,22 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", ()=>{
+        window.lib.getPosts(error, articles).then(articles =>{
+            articles.forEach((article) => {
+
+                let artID = article.id;
+
+                window.lib.getComments(artID).then(comments=>{
+
+                    // console.log(comments);
+                    comments.forEach((comment) => {
+                        article.comment = comment.author + " - " + comment.content;
+                    })
+                    
+                });
+                console.log(article);
+            });
+        });
+    });
 })();

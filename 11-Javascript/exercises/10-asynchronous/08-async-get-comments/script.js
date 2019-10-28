@@ -11,4 +11,20 @@
 
 (() => {
     // your code here
+
+    document.getElementById("run").addEventListener("click", async ()=>{
+       
+        const articles = await window.lib.getPosts(articles=>{});
+
+        articles.forEach((article)=>{
+
+            let artID = article.id;
+
+            window.lib.getComments(artID).then(comments =>{
+                    article.comments = comments;
+            })
+        });
+       console.log(articles);
+
+    });
 })();

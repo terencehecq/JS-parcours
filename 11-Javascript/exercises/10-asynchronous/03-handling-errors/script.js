@@ -16,7 +16,7 @@
 
         window.lib.getPersons((error,persons)=>{
             console.log(persons);
-            if(persons == undefined){
+            if(error){
                 console.error(error);
             }
         })
