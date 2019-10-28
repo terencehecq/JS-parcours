@@ -18,13 +18,8 @@
                 let artID = article.id;
 
                 window.lib.getComments(artID).then(comments=>{
-
-                    // console.log(comments);
-                    comments.forEach((comment) => {
-                        article.comment = comment.author + " - " + comment.content;
-                    })
-                    
-                });
+                        article.comments = comments;
+                })
                 console.log(article);
             });
         });

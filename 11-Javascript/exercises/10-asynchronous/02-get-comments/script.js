@@ -19,14 +19,11 @@
                 let artID = article.id;
 
                 window.lib.getComments(artID, (error, comments)=>{
-
-                    comments.forEach((comment) => {
-                        article.comment = comment.author + " - " + comment.content;
-                    })
-                    
+                    article.comments = comments;
                 });
-                console.log(article);
             });
+            
+            console.log(articles);
         })
     });
 })();

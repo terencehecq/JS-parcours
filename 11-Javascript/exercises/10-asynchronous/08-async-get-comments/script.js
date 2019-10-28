@@ -14,7 +14,7 @@
 
     document.getElementById("run").addEventListener("click", async ()=>{
        
-        const articles = await window.lib.getPosts(articles=>{});
+        const articles = await window.lib.getPosts();
 
         articles.forEach((article)=>{
 
