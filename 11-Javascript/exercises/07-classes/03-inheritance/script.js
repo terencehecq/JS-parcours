@@ -24,14 +24,14 @@
     // your code here
 
     class Cat extends Animal{
-        constructor(name, greeting){ 
+        constructor(name){ 
             super(name); // Je récupère la propriété name de la classe "Animal"
             this.greeting = "Meow " // Je défini la valeur par défaut de greeting pour la classe "Cat"
         }
     }
 
     class Dog extends Animal{
-        constructor(name, greeting){
+        constructor(name){
             super(name);
             this.greeting = "Wouf "
         }

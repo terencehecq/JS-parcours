@@ -17,6 +17,8 @@
             let response = await fetch("http://localhost:3000/heroes"); // On attend de récupérer le fetch du localhost qui renvoie une 'response'
             let xmen = await response.json(); // on transforme la response du fetch en json
             console.log(xmen); // on affiche les valeurs}
+            
+            // Rajout personnel
             xmen.forEach((hero)=>{
                 console.log(hero.name);
             })
