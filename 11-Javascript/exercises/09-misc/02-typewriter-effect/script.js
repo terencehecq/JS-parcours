@@ -11,4 +11,35 @@
 
 (() => {
     // your code here
+
+    let text = document.getElementById("target").innerHTML;
+    let letters = [...text];
+
+    
+    for(let i=0;i<letters.length; i++){
+        letters[i] = `<span style="visibility:hidden">${letters[i]}</span>`;
+    }
+
+    document.getElementById("target").innerHTML = letters.join('');
+
+    let count = 1;
+   
+    function typeLetters(){
+        
+        if(count <= letters.length){
+            let random = 50+ parseInt(Math.random()*200);
+
+            document.querySelector(`#target span:nth-child(${count})`).style.visibility = "visible";
+        
+            setTimeout(typeLetters, random);
+            count++
+        }
+        else{
+            // clearTimeout(typeLetters); 
+            // Pas besoin de Clear car boucle dans le if, quand on en sort, la fonction setTimeout s'arrête
+            console.log("C'est fini");
+        } 
+    }
+
+    typeLetters();
 })();

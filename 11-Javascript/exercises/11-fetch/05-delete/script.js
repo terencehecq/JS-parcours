@@ -21,7 +21,7 @@
 
     let deleteXman = async function(id){
         let response = await fetch('http://localhost:3000/heroes' + "/" + id,{
-            method:'DELETE'
+        method:'DELETE'
         });
         let deletedXman = await response.json();
         console.log(deletedXman);

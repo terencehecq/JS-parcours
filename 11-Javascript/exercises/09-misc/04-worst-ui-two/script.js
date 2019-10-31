@@ -11,4 +11,42 @@
 
 (() => {
     // your code here
+
+    let target = document.getElementById("target");
+    
+    function numerotation(btnID){
+
+        let val = document.getElementById(btnID);
+        let value = parseInt(val.innerHTML);
+        let max = parseInt(val.dataset.max);
+        let min = parseInt(val.dataset.min);
+        let newVal;
+
+        if(value < max && btnID != "part-one"){
+            newVal = value + 1;
+            val.innerHTML = "0" + newVal 
+        }else if(value < max && btnID == "part-one"){
+            newVal = value + 1;
+            val.innerHTML = newVal 
+        }else{
+            val.innerHTML = min;
+        }
+
+        let valOne = document.getElementById("part-one").innerHTML;
+        let valTwo = document.getElementById("part-two").innerHTML;
+        let valThree = document.getElementById("part-three").innerHTML;
+        let valFour = document.getElementById("part-four").innerHTML;
+        
+        target.innerHTML = `+${valOne}${valTwo}${valThree}${valFour}`;
+    }
+
+    document.querySelectorAll("button").forEach((button)=>{
+        button.addEventListener("click", ()=>{
+        
+        return numerotation(button.id); 
+        // On lance la fct numerotation() avec comme paramètre l'id du bouton cliqué
+        
+        })  
+    })
+        
 })();
