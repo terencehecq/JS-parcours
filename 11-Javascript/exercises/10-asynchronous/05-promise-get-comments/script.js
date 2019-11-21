@@ -12,7 +12,7 @@
 (() => {
     // your code here
     document.getElementById("run").addEventListener("click", ()=>{
-        window.lib.getPosts(error, articles).then(articles =>{
+        window.lib.getPosts().then(articles =>{
             articles.forEach((article) => {
 
                 let artID = article.id;

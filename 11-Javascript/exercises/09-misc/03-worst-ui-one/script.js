@@ -12,7 +12,7 @@
 (() => {
     // your code here
 
-    document.getElementById("slider").oninput= ()=>{
+    document.getElementById("slider").oninput = ()=>{
         let value = document.getElementById("slider").value;
 
         let target = document.getElementById("target");

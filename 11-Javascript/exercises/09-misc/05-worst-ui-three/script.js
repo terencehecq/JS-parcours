@@ -12,6 +12,11 @@
 (() => {
     // your code here
 
+    //changer la couleur des boutons
+    document.querySelectorAll("button").forEach((button)=>{
+        button.style.backgroundColor ="red";
+    })
+
     
     // Fonction qui, appelée par setInterval() fait tourner les slots
     function test(id){
@@ -48,10 +53,14 @@
             if(arrRunning[id] === true){ // On stoppe l'appel de la fonction (donc le slot)
                 clearInterval(arrInterval[id]);
                 arrRunning[id] = false; // On passe la valeur correspondant à l'id à false (le slot est stoppé)
+                document.querySelector(`#fix-${id}`).innerHTML = "Start"
+                document.querySelector(`#fix-${id}`).style.backgroundColor = "green"
 
             }else{
                 arrInterval[id] = setInterval(test, 100, id); // Si le slot était stoppé, on le relance
                 arrRunning[id] = true; //On passe la valeur correspondant à l'id à true (On dit que le slot tourne)
+                document.querySelector(`#fix-${id}`).innerHTML = "Stop";
+                document.querySelector(`#fix-${id}`).style.backgroundColor = "red";
             }
 
             if(arrRunning[id] === false){ // Si le slot est stoppé
