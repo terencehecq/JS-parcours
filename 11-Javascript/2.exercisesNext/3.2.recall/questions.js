@@ -148,43 +148,58 @@ let getAllLetters = (array) => {
 }
 
 let swapKeysAndValues = (object) => {
-    return 'Write your method here';
+    // let keys = Object.keys(object);
+    // let values = Object.values(object);
+    // let newObj = {}; 
+    // for(let i=0; i<keys.length; i++){
+    //     newObj[values[i]] = keys[i];
+    // }
+    // return newObj;
+
+    return Object.fromEntries(Object.entries(object).map(([key,value]) => [value,key]));
+    
 }
 
 let sumKeysAndValues = (object) => {
-    return 'Write your method here';
+    return Object.entries(object).map(([key,value]) => parseInt(key) + value).reduce((a,b) => a+b);
 }
 
 let removeCapitals = (string) => {
-    return 'Write your method here';
+    return string.replace(/[A-Z]/g,'');
 }
 
 let roundUp = (number) => {
-    return 'Write your method here';
+    return Math.ceil(number);
 }
 
 let formatDateNicely = (date) => {
-    return 'Write your method here';
+    return date.toLocaleDateString('en-GB');
 }
 
 let getDomainName = (string) => {
-    return 'Write your method here';
+    return string.slice((string.indexOf('@')+1), (string.lastIndexOf('.')));
 }
 
 let titleize = (string) => {
-    return 'Write your method here';
+
+    let array = string.split(' ').map(elem => elem.charAt(0).toUpperCase() + elem.slice(1))
+    return array.join(' ');
 }
 
 let checkForSpecialCharacters = (string) => {
-    return 'Write your method here';
+    return RegExp(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/).test(string)
 }
 
 let squareRoot = (number) => {
-    return 'Write your method here';
+    return Math.sqrt(number);
 }
 
 let factorial = (number) => {
-    return 'Write your method here';
+    let result = 0;
+    for (let i=number-1; i>0; i--){
+        result += 
+    }
+    return ;
 }
 
 let findAnagrams = (string) => {
